@@ -1,4 +1,6 @@
-# starting the shell scripting 
+# Starting  the shell scripting 
+* Mastering the shell script
 ```
-Mastering shell script
+git add <file-name>
+
 ```
