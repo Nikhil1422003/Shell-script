@@ -1,6 +1,6 @@
 #!/bin/bash
 
-MOVIES =("Kalki2898AD" "Salaar" "Adipurush") 
+MOVIES=("Kalki2898AD" "Salaar" "Adipurush") 
 
 #size of the above array is 3
 #index are 0,1,2
