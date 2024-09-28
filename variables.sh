@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #declaring of variable
-PERSON1=Ramesh
-PERSON2=Suresh
+PERSON1=$1
+PERSON2=$2
 
 
 #refering of variable
