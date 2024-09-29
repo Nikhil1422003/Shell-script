@@ -1,7 +1,9 @@
 #!/bin/bash
 
 USERID=$(id-u)
-
+TIMESTAMP=$(date +%F-%H-%M-%S)
+SCRIPT-NAME=$(echo $0 | cut -d "." -f1)
+LOGFILE=tmp/$SCRIPT_NAME-$TIMESTAMP.log
 VALIDATE(){
 
 if [ $1 -ne 0 ]
@@ -22,8 +24,8 @@ else
     echo "You are super user"
 fi 
 
-apt install mysql-server -y
+apt install mysql-server -y &>>$LOGFILE
 VALIDATE $? "Installing mysql"
 
-apt install git -y
+apt install git -y &>>$LOGFILE
 VALIDATE $? "Installing git"
