@@ -4,6 +4,10 @@ USERID=(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%S)
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 LOGFILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
 
 if [ $USERID -ne o ]
 then 
@@ -19,7 +23,7 @@ do
   apt list installed $i &>>$LOGFILE
   if [ $? -eq 0 ]
   then 
-     echo "$i alreasy installed ...Skkipped"
+     echo  -e "$i alreasy installed ...$Y Skkipped $N"
   else
      echo "$i not installed ....need to install"
   fi
